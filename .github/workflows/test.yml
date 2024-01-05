@@ -1,0 +1,39 @@
+name: Test Scripts
+on: [push, pull_request]
+
+jobs:
+  test-windows:
+    runs-on: windows-latest
+    steps:
+      - name: "Checkout"
+        uses: actions/checkout@v4.1.1
+        with:
+          fetch-depth: 0
+      - name: "Test: Initialize work directory"
+        shell: cmd
+        run: |
+          mkdir test
+          copy patcher.bat .\test\patcher.bat
+          echo D | xcopy .\.github\workflows\assets\patches .\test\patches /s /q
+          echo D | xcopy .\.github\workflows\assets\source .\test\source /s /q
+          cd test
+          set DEBUG=true
+          call patcher.bat app
+      - name: "Test: Modify source"
+        shell: cmd
+        run: |
+          copy .\.github\workflows\assets\modified\something.json .\test\source\dir\something.json
+          cd test
+          set DEBUG=true
+          call patcher.bat app
+      - name: "Test: Rebuild patches"
+        shell: cmd
+        run: |
+          cd test
+          call patcher.bat reb
+      - name: Upload work directory
+        uses: actions/upload-artifact@v4.0.0
+        continue-on-error: true
+        with:
+          name: windows-work-directory
+          path: test

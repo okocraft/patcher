@@ -1,0 +1,13 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: Siroshun09 <siro.shun8@gmail.com>
+Date: Fri, 5 Jan 2024 04:07:44 +0900
+Subject: [PATCH] Fix typo
+
+
+diff --git a/example.txt b/example.txt
+index 5f1cfce26640056bed3710cfaf3062a6a326a119..7035a916cccf1467f619f878873510d5cb5d6e94 100644
+--- a/example.txt
++++ b/example.txt
+@@ -1 +1 @@
+-example file
++An example file.

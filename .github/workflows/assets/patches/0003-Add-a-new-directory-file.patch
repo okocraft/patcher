@@ -1,0 +1,13 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: Siroshun09 <siro.shun8@gmail.com>
+Date: Fri, 5 Jan 2024 04:09:51 +0900
+Subject: [PATCH] Add a new directory/file
+
+
+diff --git a/new-dir/new-file.txt b/new-dir/new-file.txt
+new file mode 100644
+index 0000000000000000000000000000000000000000..6434b133c0a09a40b66a5806cd3246a36d38450a
+--- /dev/null
++++ b/new-dir/new-file.txt
+@@ -0,0 +1 @@
++This is a new file.

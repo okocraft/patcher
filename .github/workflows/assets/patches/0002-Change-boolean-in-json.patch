@@ -1,0 +1,17 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: Siroshun09 <siro.shun8@gmail.com>
+Date: Fri, 5 Jan 2024 04:08:14 +0900
+Subject: [PATCH] Change boolean in json
+
+
+diff --git a/dir/something.json b/dir/something.json
+index 0fbc3c7f343314ebb8142f7756d0101fffb30532..355da488103b9963395db3214a5db74fead29a18 100644
+--- a/dir/something.json
++++ b/dir/something.json
+@@ -1,5 +1,5 @@
+ {
+     "a": "b",
+     "num": 10,
+-    "bool": true
++    "bool": false
+ }

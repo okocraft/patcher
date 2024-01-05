@@ -9,6 +9,10 @@ jobs:
         uses: actions/checkout@v4.1.1
         with:
           fetch-depth: 0
+      - name: "Configure Git"
+        run: |
+          git config --global user.email "no-reply@github.com"
+          git config --global user.name "Github Actions"
       - name: "Test: Initialize work directory"
         shell: cmd
         run: |
